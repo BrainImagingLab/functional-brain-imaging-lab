@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const rolesOrder = [
             "Principal Investigator",
+            "Administrative Assistant",
+            "Research Staff / Technicians",
             "Postdoctoral Fellows",
             "PhD Student",
             "Master's Student",
-            "Research Staff / Technicians",
-            "Administrative Assistant",
             "Undergraduate Student"
         ];
 
