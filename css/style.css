@@ -461,6 +461,46 @@ footer {
   transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
+/* CHANGE: Non-featured People cards are full-width horizontal rows.
+   #current-members is itself a grid, so forcing it to one column prevents
+   horizontal cards from being squeezed into the old 3-column layout. */
+#current-members {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.person-card--horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  grid-column: 1 / -1;
+  text-align: left;
+}
+
+.person-card--horizontal .person-photo-wrapper {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.person-card--horizontal .person-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.person-card--horizontal .person-details {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* CHANGE: Keep research text left-aligned in horizontal cards. */
+.person-card--horizontal .research-summary {
+  text-align: left;
+}
+
 .person-card:hover, .alumni-card:hover {
   border-color: rgba(45, 212, 191, 0.3);
   box-shadow: var(--shadow-glow);
@@ -626,7 +666,8 @@ main {
 }
 
 /* Mobile responsive */
-@media (max-width: 900px) {
+/* old mobile responsive code for featured card, now commented out */
+/* @media (max-width: 900px) {
   .person-card--featured {
     flex-direction: column;
     align-items: center;
@@ -638,6 +679,32 @@ main {
   }
   .person-card--featured .research-summary {
     text-align: left;
+  }
+} */
+/* CHANGE: Stack horizontal People cards on small screens for readability. */
+@media (max-width: 700px) {
+  .person-card--horizontal {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .person-card--horizontal .person-photo-wrapper {
+    flex: none;
+  }
+
+  .person-card--horizontal .person-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .person-card--horizontal .person-details {
+    width: 100%;
+  }
+
+  .person-card--horizontal .person-links {
+    justify-content: center;
   }
 }
 
@@ -686,7 +753,7 @@ main {
 .research-summary p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--color-text);
+  color: var(--color-text-main); /* FIX: --color-text was undefined */
   margin: 0;
 }
 
@@ -1470,13 +1537,6 @@ body.light-mode .noise-overlay { opacity: 0.03; }
 
 
 
-/* ── Mouse Spotlight ── */
-#mouse-spotlight {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
 
 /* ── Magnetic Button Transition ── */
 .btn-primary, .btn-secondary {

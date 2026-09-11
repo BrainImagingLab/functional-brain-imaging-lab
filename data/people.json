@@ -145,6 +145,9 @@
       "research_fr": "Andrew est un physicien IRM fournissant une expertise en imagerie quantitative pour les études translationnelles du laboratoire. Il est coauteur d'articles dans JCBFM (2024, 2026), Alzheimer's & Dementia (2025), Theranostics (2024) et Journal of Controlled Release (2025), soutenant la quantification du flux sanguin cérébral, les études d'ultrasons focalisés et l'imagerie métabolique.",
       "bio_en": "I spend most of the warm months golfing and camping. Most of my free time during the winter is spent inside, playing games with friends. I’m an avid movie goer all year round.",
       "bio_fr": "Je passe la plupart des mois chauds à jouer au golf et à faire du camping. La majeure partie de mon temps libre en hiver est consacrée aux jeux avec des amis. Je suis un cinéphile passionné toute l'année.",
+      "quote_en": "Yet such is oft the course of deeds that move the wheels of the world: small hands do them because they must, while the eyes of the great are elsewhere.",
+      "quote_fr": "Pourtant, tel est souvent le cours des actions qui font tourner les roues du monde : les petites mains les font parce qu'elles le doivent, tandis que les yeux des grands sont ailleurs.",
+      "quote_author": "Elrond, Lord of the Rings",
       "links": {
         "email": "astanisz@sri.utoronto.ca"
       },
@@ -181,8 +184,8 @@
       "photo": "images/people/placeholder.jpg",
       "research_en": "Jazlynn's first-author paper in Brain Communications (2025) introduced a novel integration of graph theory-based stepwise connectivity with connectome gradient space to study multi-step tau propagation from the entorhinal cortex in Alzheimer's disease. She also coauthored a Nature Communications paper (2024) on tau distribution along principal axes of brain organization.",
       "research_fr": "L'article de premier auteur de Jazlynn dans Brain Communications (2025) a introduit une intégration novatrice de la connectivité par étapes basée sur la théorie des graphes avec l'espace de gradient connectomique pour étudier la propagation multi-étapes du tau depuis le cortex entorhinal dans la maladie d'Alzheimer. Elle est aussi coauteure d'un article Nature Communications (2024) sur la distribution du tau.",
-      "bio_en": "Jazlynn is a PhD student in the Functional Brain Imaging Lab.",
-      "bio_fr": "Jazlynn est une étudiante de troisième cycle au laboratoire d'imagerie fonctionnelle du cerveau.",
+      "bio_en": "Jazlynn is an undergraduate student in the Functional Brain Imaging Lab.",
+      "bio_fr": "Jazlynn est un étudiant de premier cycle au laboratoire d'imagerie fonctionnelle du cerveau.",
       "links": {},
       "yearJoined": 2024
     },
@@ -208,7 +211,7 @@
     },
     {
       "name": "Yu",
-      "role": "Master's Students",
+      "role": "Master's Student",
       "status": "current",
       "photo": "images/people/placeholder.jpg",
       "bio_en": "Yu is a current member of the Functional Brain Imaging Lab.",
