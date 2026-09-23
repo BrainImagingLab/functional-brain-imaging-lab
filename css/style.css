@@ -1556,3 +1556,43 @@ body.light-mode .noise-overlay { opacity: 0.03; }
     transform: translateY(0);
   }
 }
+
+/* Interested in Joining page */
+.joining-intro { max-width: 850px; margin: 0 auto 2rem; text-align: center; line-height: 1.8; }
+.joining-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.joining-panel { max-width: 850px; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--color-border, rgba(128,128,128,.3)); border-radius: var(--border-radius-lg); background: var(--color-bg-card, transparent); }
+.joining-panel p { margin-bottom: 1.25rem; }
+.joining-steps { padding-left: 1.5rem; margin: 1.5rem 0; }
+.joining-steps li { margin-bottom: 1rem; line-height: 1.7; }
+.joining-toronto { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 3rem; max-width: 1000px; margin: 0 auto; }
+.joining-toronto img { display: block; width: 100%; height: 320px; object-fit: cover; border-radius: var(--border-radius-lg); }
+.joining-toronto p { margin-bottom: 1rem; }
+.joining-toronto .btn { margin: .25rem .35rem .25rem 0; }
+@media (max-width: 700px) { .joining-toronto { grid-template-columns: 1fr; gap: 1.5rem; } .joining-toronto img { height: 230px; } }
+
+/* Adaptive header: compact typography first, then collapse only overflowed items. */
+.nav-container { gap: 1rem; min-width: 0; }
+.nav-container .logo { flex: 0 0 auto; white-space: nowrap; font-size: clamp(1rem, 1.55vw, 1.5rem); }
+.nav-links { min-width: 0; gap: clamp(.25rem, .65vw, .75rem); flex: 0 0 auto; }
+.nav-links > a { white-space: nowrap; padding: .5rem clamp(.35rem, .6vw, .7rem); }
+.nav-more { position: relative; flex: 0 0 auto; }
+.nav-more[hidden], .nav-more-menu[hidden] { display: none !important; }
+.nav-more-button { font: 700 .9rem var(--font-accent); color: var(--color-text-muted);
+  background: transparent; border: 1px solid var(--color-border); border-radius: var(--border-radius-pill);
+  padding: .5rem .75rem; cursor: pointer; white-space: nowrap; }
+.nav-more-button:hover, .nav-more-button[aria-expanded="true"] { color: var(--color-primary); background: rgba(45,212,191,.1); }
+.nav-more-menu { position: absolute; right: 0; top: calc(100% + .75rem); z-index: 105;
+  display: flex; flex-direction: column; align-items: stretch; min-width: 215px; max-width: min(330px, 90vw);
+  max-height: min(70vh, 560px); overflow-y: auto; gap: .2rem; padding: .65rem;
+  background: #141d30; border: 1px solid var(--color-border); border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+.nav-more-menu a, .nav-more-menu button { width: 100%; text-align: left; white-space: normal; }
+@media (max-width: 768px) {
+  .nav-more { display: none !important; }
+  .nav-links { display: flex; }
+  .nav-links > a { white-space: normal; }
+  .nav-container .logo { font-size: clamp(.95rem, 4vw, 1.35rem); }
+  .nav-links { width: min(320px, 100vw); max-width: 100vw; height: 100dvh;
+    overflow-y: auto; align-items: stretch; }
+  .nav-links > button { align-self: flex-start; }
+}
