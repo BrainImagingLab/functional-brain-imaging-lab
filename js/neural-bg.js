@@ -187,3 +187,74 @@ document.addEventListener('DOMContentLoaded', () => {
   requestAnimationFrame(frame);
 })();
 
+
+// Adaptive navigation: put only links that do not fit under “More / Plus”.
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('nav-links');
+  const container = nav?.closest('.nav-container');
+  const logo = container?.querySelector('.logo');
+  if (!nav || !container || !logo) return;
+
+  const entries = Array.from(nav.children);
+  const more = document.createElement('div');
+  more.className = 'nav-more';
+  more.hidden = true;
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'nav-more-button';
+  button.textContent = document.documentElement.lang === 'fr' ? 'Plus ▾' : 'More ▾';
+  button.setAttribute('aria-label', document.documentElement.lang === 'fr' ? 'Autres pages' : 'More pages');
+  button.setAttribute('aria-expanded', 'false');
+  button.setAttribute('aria-haspopup', 'true');
+  const menu = document.createElement('div');
+  menu.className = 'nav-more-menu';
+  menu.hidden = true;
+  more.append(button, menu);
+  nav.append(more);
+
+  function closeMore() { menu.hidden = true; button.setAttribute('aria-expanded', 'false'); }
+  button.addEventListener('click', () => {
+    const open = menu.hidden;
+    menu.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', event => { if (!more.contains(event.target)) closeMore(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) { closeMore(); button.focus(); }
+  });
+  menu.addEventListener('click', event => { if (event.target.closest('a')) closeMore(); });
+
+  function fitNavigation() {
+    closeMore();
+    // Restore original order before remeasuring, including at mobile sizes.
+    entries.forEach(entry => nav.insertBefore(entry, more));
+    more.hidden = true;
+    if (window.matchMedia('(max-width: 768px)').matches) return;
+    const gap = parseFloat(getComputedStyle(nav).columnGap) || 0;
+    const available = container.clientWidth - logo.getBoundingClientRect().width -
+      (parseFloat(getComputedStyle(container).columnGap) || 16) - 2;
+    const widthNeeded = () => {
+      const visible = [...nav.children].filter(element => !element.hidden);
+      return visible.reduce((sum, element) => sum + element.getBoundingClientRect().width, 0) +
+        Math.max(0, visible.length - 1) * gap;
+    };
+    if (widthNeeded() <= available) return;
+    more.hidden = false;
+    // Prioritize retaining language, search and theme controls in the main bar.
+    const candidates = entries.filter(entry => entry.matches('a:not(.lang-toggle)')).reverse();
+    while (widthNeeded() > available && candidates.length) {
+      const entry = candidates.shift();
+      menu.prepend(entry);
+    }
+    // Extremely narrow desktop widths: the standard hamburger handles <=768px.
+  }
+  let resizeFrame;
+  function scheduleFit() {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(fitNavigation);
+  }
+  window.addEventListener('resize', scheduleFit);
+  document.fonts?.ready.then(scheduleFit);
+  new MutationObserver(scheduleFit).observe(logo, { childList: true, characterData: true, subtree: true });
+  fitNavigation();
+});
