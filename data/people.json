@@ -216,8 +216,8 @@
       "photo": "images/people/placeholder.jpg",
       "research_en": "Chronic stress is a major modifiable factor for mood disorders and neurodegeneration, yet current treatments yield limited outcomes. The brain has very limited energetic stores, so its function critically depends on glucose supply by the vasculature and glucose metabolism by neurons and glia. I am leveraging a genetically encoded Peredox sensor for cellular NADH:NAD+, to quantify neuronal and glial metabolic state in situ using two-photon fluorescence lifetime microscopy (2PFLIM) in chronically stressed mice. ",
       "research_fr": "Le stress chronique est un facteur modifiable majeur dans les troubles de l'humeur et la neurodégénérescence ; pourtant, les traitements actuels n'offrent que des résultats limités. Le cerveau disposant de réserves énergétiques très restreintes, son fonctionnement dépend de manière critique de l'apport en glucose par le système vasculaire ainsi que du métabolisme du glucose au sein des neurones et des cellules gliales. J'utilise un capteur génétiquement codé (Peredox) mesurant le rapport NADH/NAD+ cellulaire pour quantifier l'état métabolique des neurones et des cellules gliales *in situ*, grâce à la microscopie de fluorescence à deux photons résolue en temps de vie (2PFLIM), chez des souris soumises à un stress chronique.",
-      "bio_en": "Apart from lab life, I enjoy playing tennis, paddleboarding on Lake Ontario, and cuddling my two cats."
-      "bio_fr": "En dehors de la vie au laboratoire, j'aime jouer au tennis, faire du paddle sur le lac Ontario et câliner mes deux chats."
+      "bio_en": "Apart from lab life, I enjoy playing tennis, paddleboarding on Lake Ontario, and cuddling my two cats.",
+      "bio_fr": "En dehors de la vie au laboratoire, j'aime jouer au tennis, faire du paddle sur le lac Ontario et câliner mes deux chats.",
       "links": {"email": "kristyyu.zhang@mail.utoronto.ca"},
       "yearJoined": 2026
     },
