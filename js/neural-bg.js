@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => { seed(); });
 
   // mouse interaction
-  let mx = null, my = null;
-  const MOUSE_R = 250;
-  window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  window.addEventListener('mouseout', () => { mx = my = null; });
+  //let mx = null, my = null;
+  //const MOUSE_R = 250;
+  //window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  //window.addEventListener('mouseout', () => { mx = my = null; });
 
   // Get opacity based on distance from edges (1 = at edge, 0 = deep in content)
   function getMarginAlpha(x) {
