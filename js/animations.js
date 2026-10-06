@@ -165,16 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ─── 5. MOUSE-REACTIVE GRADIENT SPOTLIGHT ──────────────────────────
-    const spotlight = document.getElementById('mouse-spotlight');
-    if (spotlight && window.matchMedia('(pointer: fine)').matches) {
-        document.addEventListener('mousemove', e => {
-            spotlight.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(45, 212, 191, 0.06), transparent 60%)`;
-        });
-    }
+    //const spotlight = document.getElementById('mouse-spotlight');
+    //if (spotlight && window.matchMedia('(pointer: fine)').matches) {
+    //    document.addEventListener('mousemove', e => {
+    //        spotlight.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(45, 212, 191, 0.06), transparent 60%)`;
+    //    });
+    //}
 
 
     // ─── 6. MAGNETIC BUTTONS ───────────────────────────────────────────
-    const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
+    //const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
     if (window.matchMedia('(pointer: fine)').matches) {
         magneticBtns.forEach(btn => {
             btn.addEventListener('mousemove', e => {
