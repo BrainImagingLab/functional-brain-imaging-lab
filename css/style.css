@@ -1596,3 +1596,22 @@ body.light-mode .noise-overlay { opacity: 0.03; }
     overflow-y: auto; align-items: stretch; }
   .nav-links > button { align-self: flex-start; }
 }
+
+@media (max-width: 700px) {
+    #current-members .person-card--featured {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 1.25rem;
+    }
+
+    #current-members .person-card--featured .person-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    #current-members .person-card--featured .person-details {
+        width: 100%;
+        min-width: 0;
+    }
+}
