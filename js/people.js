@@ -44,8 +44,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             return key ? I18n.t(key) : role;
         };
 
-        // Roles that get the featured horizontal layout
-        const featuredRoles = ["Principal Investigator", "Postdoctoral Fellows"];
+        // All current members use the featured horizontal layout
+        const featuredRoles = [
+            "Principal Investigator",
+            "Administrative Assistant",
+            "Research Staff / Technicians",
+            "Postdoctoral Fellows",
+            "PhD Student",
+            "Master's Student",
+            "Undergraduate Student",
+            "Research Assistant"
+        ];
         
         const getRoleOrder = (role) => {
             const index = rolesOrder.indexOf(role);
