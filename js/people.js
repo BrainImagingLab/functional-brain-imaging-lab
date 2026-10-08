@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (isFeatured) {
                     // Horizontal featured card (PI / Postdocs)
                     html += `
-                        <div class="person-card person-card--featured">
+                        <div class="person-card person-card--featured person-card--horizontal">
                             <div class="person-photo-wrapper">
                                 <img src="${prefix}${member.photo}" alt="${member.name}" class="person-photo person-photo--circle" onerror="this.src='${prefix}images/people/placeholder.jpg'">
                             </div>
