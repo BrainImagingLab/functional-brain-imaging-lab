@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div class="person-details">
                             <h3>${member.name}</h3>
                             <p class="role">${member.role}</p>
-                            <p class="year-left">${member.yearJoined ? member.yearJoined + ' \u2013 ' : ''}${member.yearLeft}</p>
+                            ${member.yearJoined ? `<p class="year-joined">${I18n.t('people.joined')} ${member.yearJoined}</p>` : ''}
                             ${member.currentPosition ? `<p class="current-position"><strong>${I18n.t('people.currentPosition')}:</strong> ${member.currentPosition}</p>` : ''}
                             ${researchHtml}
                             <p class="bio">${member[langBio] || member.bio_en}</p>
