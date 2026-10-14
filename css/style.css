@@ -1615,3 +1615,13 @@ body.light-mode .noise-overlay { opacity: 0.03; }
         min-width: 0;
     }
 }
+
+/* Alumni cards without profile pictures */
+.alumni-card {
+    gap: 0;
+    text-align: left;
+}
+
+.alumni-card .person-details {
+    width: 100%;
+}
