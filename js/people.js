@@ -182,7 +182,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 html += `
                     <div class="alumni-card">
-                        <img src="${prefix}${member.photo}" alt="${member.name}" class="person-photo person-photo--circle" onerror="this.src='${prefix}images/people/placeholder.jpg'">
                         <div class="person-details">
                             <h3>${member.name}</h3>
                             <p class="role">${member.role}</p>
