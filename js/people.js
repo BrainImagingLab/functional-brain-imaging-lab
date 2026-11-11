@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     html += `
                         <div class="person-card person-card--featured person-card--horizontal">
                             <div class="person-photo-wrapper">
-                                <img src="${prefix}${member.photo}" alt="${member.name}" class="person-photo person-photo--circle" onerror="this.src='${prefix}images/people/placeholder.jpg'">
+                                <img src="${prefix}${member.photo}" alt="${member.name}" class="person-photo person-photo--circle" onerror="this.src='${prefix}images/people/placeholder.png'">
                             </div>
                             <div class="person-details">
                                 <h3>${member.name}</h3>
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // Standard grid card (students, staff, etc.)
                     html += `
                         <div class="person-card person-card--grid">
-                            <img src="${prefix}${member.photo}" alt="${member.name}" class="person-photo person-photo--circle" onerror="this.src='${prefix}images/people/placeholder.jpg'">
+                            <img src="${prefix}${member.photo}" alt="${member.name}" class="person-photo person-photo--circle" onerror="this.src='${prefix}images/people/placeholder.png'">
                             <div class="person-details">
                                 <h3>${member.name}</h3>
                                 <p class="role">${translateRole(member.role)}</p>
