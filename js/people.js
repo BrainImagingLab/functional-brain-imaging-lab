@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!currentMembersContainer && !alumniContainer) return; // Not on people page
 
     try {
-        const prefix = I18n.locale === 'fr' ? '../' : './';
+        const isFr = window.location.pathname.includes('/fr/');
+        const prefix = isFr ? '../' : './';
         let response = await fetch(`${prefix}data/people.json`);
         if (!response.ok) {
             response = await fetch(`/data/people.json`);
