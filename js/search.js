@@ -71,7 +71,10 @@
         try {
             const newsRes = await fetch(prefix + 'data/news.json');
             const newsData = await newsRes.json();
-            (newsData.news || []).forEach(n => {
+            const newsItems = Array.isArray(newsData)
+                ? newsData
+                : (newsData.news || []);
+            newsItems.forEach(n => {
                 searchIndex.push({
                     title: n.title_en || n.title || '',
                     subtitle: n.date || '',
