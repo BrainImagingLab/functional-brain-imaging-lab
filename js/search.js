@@ -59,7 +59,9 @@
             (Array.isArray(pubs) ? pubs : []).forEach(p => {
                 searchIndex.push({
                     title: p.title || '',
-                    subtitle: (p.authors || '') + ' • ' + (p.journal || '') + ' ' + (p.year || ''),
+                    subtitle: (p.authors || []).join(', ') +
+                        ' • ' + (p.journal || '') +
+                        ' ' + (p.year || ''),
                     url: p.doi ? 'https://doi.org/' + p.doi : prefix + 'publications.html',
                     type: 'Publication',
                     keywords: [p.title, p.authors, p.journal, p.year, p.abstract || ''].join(' ')
