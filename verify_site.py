@@ -61,7 +61,11 @@ def verify():
         
         # Check all links (a href)
         for href in parser.links:
-            if not href or href == '#' or href.startswith('http') or href.startswith('mailto:') or href.startswith('tel:'):
+            if (
+                not href
+                or href.startswith('#')
+                or href.startswith(('http:', 'https:', 'mailto:', 'tel:'))
+            ):
                 continue
             
             # Resolve relative link
