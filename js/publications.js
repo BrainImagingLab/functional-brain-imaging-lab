@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let publications = [];
 
     try {
-        const prefix = I18n.locale === 'fr' ? '../' : './';
+        const isFr = window.location.pathname.includes('/fr/');
+        const prefix = isFr ? '../' : './';
         let response = await fetch(`${prefix}data/publications.json`);
         if (!response.ok) {
              response = await fetch(`/data/publications.json`);
