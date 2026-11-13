@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ─── 6. MAGNETIC BUTTONS ───────────────────────────────────────────
-    //const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
+    const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary');
     if (window.matchMedia('(pointer: fine)').matches) {
         magneticBtns.forEach(btn => {
             btn.addEventListener('mousemove', e => {
