@@ -190,13 +190,17 @@
       "yearJoined": 2024
     },
     {
-      "name": "Spencer",
+      "name": "Spencer Gable-Cook",
       "role": "Research Staff / Technicians",
       "status": "current",
       "photo": "images/people/placeholder.png",
-      "bio_en": "Spencer is a current member of the Functional Brain Imaging Lab.",
-      "bio_fr": "Spencer est un membre actuel du laboratoire d'imagerie fonctionnelle du cerveau.",
-      "links": {},
+      "research_en": "Spencer’s work focuses on automated image analysis pipelines for 3D brain imaging using deep learning and computer vision. He contributes to open-source neuroimaging toolkits that segment and map brain structures at scale. Spencer is excited to continue developing software solutions that help researchers unlock new insights from brain images.",
+      "research_fr": "Les travaux de Spencer portent sur le développement de pipelines automatisés d’analyse d’images cérébrales 3D à l’aide de l’apprentissage profond et de la vision par ordinateur. Il contribue à des outils de neuroimagerie à code source ouvert permettant de segmenter et de cartographier les structures cérébrales à grande échelle. Spencer se réjouit de poursuivre le développement de solutions logicielles qui aident les chercheurs à faire de nouvelles découvertes à partir d’images cérébrales.",
+      "bio_en": "Outside of work, their favourite activity is tennis, both playing and watching. They also enjoy running, especially when there’s food promised at the finish line.",
+      "bio_fr": "En dehors du travail, son activité préférée est le tennis, tant pour y jouer que pour regarder des matchs. Spencer aime également courir, surtout lorsqu’un bon repas l’attend à la ligne d’arrivée.",
+      "links": {
+        "emails": "spencer.gable-cook@sri.utoronto.ca"
+      },
       "yearJoined": 2026
     },
     {
